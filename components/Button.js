@@ -1,13 +1,24 @@
 import { StyleSheet, View, Pressable, Text } from "react-native";
 
-export default function Button ({ label }) {
+export default function Button ({ label, theme, onPress }) {
+  if (theme === "primary") {
     return (
-        <View style = {styles.buttoncontainer}>
-            <Pressable style={styles.button} onPress={()=> alert('Get up to work!')}>
-                <Text style={styles.buttonlabel}>{label}</Text>
-            </Pressable>
-        </View>
+      <View style = {styles.buttonContainer}>
+        <Pressable style={styles.button} onPress={onPress}>
+          <Text style={styles.buttonLabel}>{label}</Text>
+        </Pressable>
+      </View>
     );
+  }
+
+
+  return (
+      <View style = {styles.buttoncontainer}>
+          <Pressable style={styles.button} onPress={()=> alert('Get up to work!')}>
+              <Text style={styles.buttonlabel}>{label}</Text>
+          </Pressable>
+      </View>
+  );
 }
 
 const styles = StyleSheet.create({
