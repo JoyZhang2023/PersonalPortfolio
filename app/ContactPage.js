@@ -4,7 +4,7 @@ import { Link } from 'expo-router';
 
 const PlaceholderImage = require('D:/Projects/AD340/PersonalPortfolio/assets/shibainu.png');
 
-export default function App() {
+export default function ContactPage() {
   return (
     <View style={styles.container}>
       <View>

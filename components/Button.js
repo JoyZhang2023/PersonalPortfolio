@@ -1,11 +1,13 @@
 import { StyleSheet, View, Pressable, Text } from "react-native";
 
+
 export default function Button ({ label, theme, onPress }) {
   if (theme === "primary") {
     return (
-      <View style = {styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={onPress}>
-          <Text style={styles.buttonLabel}>{label}</Text>
+      <View style = {[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 10}]}>
+        <Pressable style={[styles.button, { backgroundColor: "#fff"}]} onPress={onPress}>
+          
+          <Text style={[styles.buttonLabel, {color: "#25292e"}]}>{label}</Text>
         </Pressable>
       </View>
     );
@@ -13,9 +15,9 @@ export default function Button ({ label, theme, onPress }) {
 
 
   return (
-      <View style = {styles.buttoncontainer}>
-          <Pressable style={styles.button} onPress={()=> alert('Get up to work!')}>
-              <Text style={styles.buttonlabel}>{label}</Text>
+      <View style = {[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 10}]}>
+          <Pressable style={[styles.button, { backgroundColor: "#fff"}]} onPress={()=> alert('Button pressed!')}>
+              <Text style={[styles.buttonLabel, {color: "#25292e"}]}>{label}</Text>
           </Pressable>
       </View>
   );
@@ -24,11 +26,11 @@ export default function Button ({ label, theme, onPress }) {
 const styles = StyleSheet.create({
     buttonContainer: {
       width: 320,
-      height: 68,
+      height: 40,
       marginHorizontal: 20,
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 3,
+      padding: 2,
     },
     button: {
       borderRadius: 10,

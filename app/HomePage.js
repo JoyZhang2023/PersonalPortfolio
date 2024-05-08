@@ -18,12 +18,18 @@ export default function HomePage() {
       <Link href={{
           pathname:"/ProjectsPage",
           params: {id: 'Business Card'}
-        }} style={{fontSize:20, paddingBottom:5}}>Project 1 : Business Card</Link>
+        }} style={{fontSize:20, paddingBottom:5}}>
+        Project 1 : Business Card
+      </Link>
       <Link href={{
           pathname:"/ProjectsPage",
           params: {id: 'Recipe Gallery'}
-        }} style={{fontSize:20, paddingBottom:5}}>Project 2 : Recipe Gallery</Link>
+        }} style={{fontSize:20, paddingBottom:5}}>
+        Project 2 : Recipe Gallery
+      </Link>
       <Link href={"/SkillsPage"} style={{fontSize:20, paddingBottom:5}}>Skills</Link>
+      <Link href={"/TryImagePicker"} style={{fontSize:20, paddingBottom:5}}>Try Out</Link>
+
         
     </View>
   );

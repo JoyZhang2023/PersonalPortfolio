@@ -1,9 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { Link } from 'expo-router';
 import { useLocalSearchParams } from 'expo-router';
-import ImagePickerWindow from '../components/ImagePicker';
-import Button from '../components/Button';
 
 export default function App() {
   const { id } = useLocalSearchParams();
@@ -11,7 +9,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={{fontSize: 30, paddingBottom:20}}>Projects : {id}</Text>
-      
+
       <Link replace href={"/HomePage"}>Back to Home Page</Link>
       <StatusBar style="auto" />
     </View>
